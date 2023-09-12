@@ -1,0 +1,24 @@
+{
+  "app_hub_id": "2eacfda3-e887-4121-80bc-63ee82fba5e9",
+  "appType": "APP",
+  "short_name": "scheduler",
+  "name": "Scheduler",
+  "description": "The Scheduler is an application for managing background jobs in DHIS2. Background jobs can do a number of tasks, such as running analytics, synchronizing data and meta data, or sending a push analysis report. The application provides the ability to create, modify and delete such jobs.",
+  "version": "101.2.2",
+  "core_app": true,
+  "launch_path": "index.html",
+  "default_locale": "en",
+  "activities": {
+    "dhis": {
+      "href": "*"
+    }
+  },
+  "icons": {
+    "48": "dhis2-app-icon.png"
+  },
+  "manifest_generated_at": "Mon Sep 11 2023 17:31:45 GMT+0200 (Central European Summer Time)",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "scope": "."
+}

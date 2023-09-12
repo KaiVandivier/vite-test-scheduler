@@ -1,0 +1,76 @@
+{
+    "name": "scheduler-app",
+    "private": true,
+    "scripts": {
+        "build:cra": "react-scripts build",
+        "start:cra": "react-scripts start",
+        "build": "d2-app-scripts build",
+        "start": "d2-app-scripts start",
+        "start:nobrowser": "BROWSER=none d2-app-scripts start",
+        "test": "d2-app-scripts test --coverage",
+        "test:watch": "d2-app-scripts test --watch",
+        "lint": "d2-style check && yarn lint:css",
+        "lint:css": "stylelint './src/**/*.css' && prettier './src/**/*.css' --check",
+        "format": "d2-style apply && yarn format:css",
+        "format:css": "prettier './src/**/*.css' --write",
+        "cypress:capture": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress run --env networkMode=capture'",
+        "cypress:stub": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress run --env networkMode=stub'",
+        "cypress:live": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress open --env networkMode=live'"
+    },
+    "dependencies": {
+        "@dhis2/app-runtime": "^3.8.0",
+        "@dhis2/d2-i18n": "^1.1.0",
+        "@dhis2/prop-types": "2.0.3",
+        "@dhis2/ui": "^8.13.14",
+        "classnames": "^2.3.1",
+        "cronstrue": "^1.114.0",
+        "history": "^4.9.0",
+        "moment": "^2.29.1",
+        "prop-types": "^15.8.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-router": "^5.0.1",
+        "react-router-dom": "^5.2.0",
+        "styled-jsx": "^4.0.1"
+    },
+    "devDependencies": {
+        "@dhis2/cli-app-scripts": "^10.3.9",
+        "@dhis2/cli-style": "^10.4.1",
+        "@dhis2/cli-utils-cypress": "^9.0.2",
+        "@dhis2/cypress-commands": "^9.0.2",
+        "@dhis2/cypress-plugins": "^9.0.2",
+        "@testing-library/cypress": "^7.0.6",
+        "@testing-library/react-hooks": "^7.0.0",
+        "cypress": "^9.5.1",
+        "cypress-cucumber-preprocessor": "^4.3.1",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.15.6",
+        "eslint-plugin-compat": "^3.9.0",
+        "eslint-plugin-i18next": "^5.1.1",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "identity-obj-proxy": "^3.0.0",
+        "start-server-and-test": "^1.12.5",
+        "stylelint": "^13.13.1",
+        "stylelint-config-prettier": "^8.0.2",
+        "stylelint-config-standard": "^22.0.0",
+        "stylelint-no-unsupported-browser-features": "^5.0.1"
+    },
+    "jest": {
+        "setupFilesAfterEnv": [
+            "<rootDir>/src/setupTests.js"
+        ],
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx}",
+            "!src/{index.js,serviceWorker.js,setupTests.js}"
+        ],
+        "coveragePathIgnorePatterns": [
+            "/node_modules/",
+            "/src/locales/"
+        ],
+        "moduleNameMapper": {
+            "\\.css$": "identity-obj-proxy"
+        }
+    },
+    "version": "101.2.2"
+}

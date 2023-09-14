@@ -9,6 +9,7 @@
 src/locales
 /coverage
 /build
+/dist
 .d2
 
 # misc

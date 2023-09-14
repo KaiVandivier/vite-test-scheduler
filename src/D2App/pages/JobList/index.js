@@ -1,2 +1,3 @@
-import JobList from './JobList';
-export default JobList;
+import JobList from './JobList'
+
+export default JobList

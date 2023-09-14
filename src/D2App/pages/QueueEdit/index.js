@@ -1,2 +1,3 @@
-import QueueEdit from './QueueEdit';
-export default QueueEdit;
+import QueueEdit from './QueueEdit'
+
+export default QueueEdit

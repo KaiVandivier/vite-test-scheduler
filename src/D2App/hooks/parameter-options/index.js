@@ -1,1 +1,1 @@
-export { default as useParameterOption } from './use-parameter-option';
+export { default as useParameterOption } from './use-parameter-option'

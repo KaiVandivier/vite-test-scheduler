@@ -1,2 +1,3 @@
-import QueueAdd from './QueueAdd';
-export default QueueAdd;
+import QueueAdd from './QueueAdd'
+
+export default QueueAdd

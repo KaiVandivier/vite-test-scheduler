@@ -1,2 +1,3 @@
-import formatError from './format-error';
-export default formatError;
+import formatError from './format-error'
+
+export default formatError

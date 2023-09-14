@@ -1,1 +1,1 @@
-export { default as useQueueables } from './use-queueables';
+export { default as useQueueables } from './use-queueables'

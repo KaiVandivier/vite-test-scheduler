@@ -1,8 +1,9 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import App from './App';
+import React from 'react'
+import { shallow } from 'enzyme'
+import App from './App'
+
 describe('<App>', () => {
-  it('renders without errors', () => {
-    shallow( /*#__PURE__*/React.createElement(App, null));
-  });
-});
+    it('renders without errors', () => {
+        shallow(<App />)
+    })
+})

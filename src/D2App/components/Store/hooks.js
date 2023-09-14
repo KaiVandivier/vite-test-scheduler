@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import StoreContext from './StoreContext';
+import { useContext } from 'react'
+import StoreContext from './StoreContext'
 
 /**
  * The state for the job filter and showing system
@@ -8,10 +8,11 @@ import StoreContext from './StoreContext';
  */
 
 export const useJobFilter = () => {
-  const store = useContext(StoreContext);
-  return store.jobFilter;
-};
+    const store = useContext(StoreContext)
+    return store.jobFilter
+}
+
 export const useShowSystemJobs = () => {
-  const store = useContext(StoreContext);
-  return store.showSystemJobs;
-};
+    const store = useContext(StoreContext)
+    return store.showSystemJobs
+}

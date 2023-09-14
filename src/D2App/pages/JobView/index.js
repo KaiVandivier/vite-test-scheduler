@@ -1,2 +1,3 @@
-import JobView from './JobView';
-export default JobView;
+import JobView from './JobView'
+
+export default JobView

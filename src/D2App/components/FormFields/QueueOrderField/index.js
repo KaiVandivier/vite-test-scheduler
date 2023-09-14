@@ -1,1 +1,1 @@
-export { default as QueueOrderField } from './QueueOrderField';
+export { default as QueueOrderField } from './QueueOrderField'

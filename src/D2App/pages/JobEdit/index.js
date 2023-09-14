@@ -1,2 +1,3 @@
-import JobEdit from './JobEdit';
-export default JobEdit;
+import JobEdit from './JobEdit'
+
+export default JobEdit

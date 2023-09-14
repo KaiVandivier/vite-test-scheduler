@@ -1,2 +1,3 @@
-import translateCron from './translate-cron';
-export default translateCron;
+import translateCron from './translate-cron'
+
+export default translateCron

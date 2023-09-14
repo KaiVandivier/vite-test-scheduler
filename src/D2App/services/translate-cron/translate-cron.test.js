@@ -1,6 +1,6 @@
 beforeEach(() => {
-  jest.resetModules();
-});
+    jest.resetModules()
+})
 
 /**
  * This uses jest's doMock, since the value we want to mock is a property of the
@@ -12,28 +12,36 @@ beforeEach(() => {
  */
 
 describe('translateCron', () => {
-  it('should return an empty string for invalid CRON expressions', () => {
-    jest.doMock('@dhis2/d2-i18n', () => ({
-      language: 'en'
-    }));
-    const translateCron = require('./translate-cron').default;
-    const actual = translateCron('invalid');
-    expect(actual).toBe('');
-  });
-  it('should return a translation in the requested locale for valid CRON expressions', () => {
-    jest.doMock('@dhis2/d2-i18n', () => ({
-      language: 'fr'
-    }));
-    const translateCron = require('./translate-cron').default;
-    const actual = translateCron('0 0 1 ? * *');
-    expect(actual).toEqual(expect.stringContaining('À 01:00 AM'));
-  });
-  it('should fall back to English', () => {
-    jest.doMock('@dhis2/d2-i18n', () => ({
-      language: undefined
-    }));
-    const translateCron = require('./translate-cron').default;
-    const actual = translateCron('0 0 1 ? * *');
-    expect(actual).toEqual(expect.stringContaining('At 01:00 AM'));
-  });
-});
+    it('should return an empty string for invalid CRON expressions', () => {
+        jest.doMock('@dhis2/d2-i18n', () => ({
+            language: 'en',
+        }))
+        const translateCron = require('./translate-cron').default
+
+        const actual = translateCron('invalid')
+
+        expect(actual).toBe('')
+    })
+
+    it('should return a translation in the requested locale for valid CRON expressions', () => {
+        jest.doMock('@dhis2/d2-i18n', () => ({
+            language: 'fr',
+        }))
+        const translateCron = require('./translate-cron').default
+
+        const actual = translateCron('0 0 1 ? * *')
+
+        expect(actual).toEqual(expect.stringContaining('À 01:00 AM'))
+    })
+
+    it('should fall back to English', () => {
+        jest.doMock('@dhis2/d2-i18n', () => ({
+            language: undefined,
+        }))
+        const translateCron = require('./translate-cron').default
+
+        const actual = translateCron('0 0 1 ? * *')
+
+        expect(actual).toEqual(expect.stringContaining('At 01:00 AM'))
+    })
+})

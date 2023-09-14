@@ -3,9 +3,10 @@
  * inputs expect and return a string, so we're formatting them to strings
  */
 
-export const formatToString = value => {
-  if (typeof value === 'number') {
-    return value.toString();
-  }
-  return value;
-};
+export const formatToString = (value) => {
+    if (typeof value === 'number') {
+        return value.toString()
+    }
+
+    return value
+}

@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
 
     // Change default ENV prefix from VITE_ to be backward compatible with CRA
     // https://vitejs.dev/config/shared-options.html#envprefix
-    envPrefix: 'REACT_APP',
+    envPrefix: "REACT_APP",
 
     // Need to add vars on process.env here
     define: {
@@ -51,6 +51,7 @@ export default defineConfig(({ mode }) => {
         "node_modules/**/*.ts",
       ],
       exclude: [],
+      jsx: "automatic",
     },
   };
 });

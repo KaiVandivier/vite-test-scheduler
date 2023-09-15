@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { NoticeBox, Card, Checkbox, InputField, IconInfo16 } from '@dhis2/ui'
 import i18n from '@dhis2/d2-i18n'
 import { useJobsAndQueues } from '../../hooks/jobs-and-queues'
@@ -33,9 +33,10 @@ const JobList = () => {
 
     // Apply the current filter settings
     const jobs = filterJobs({ jobFilter, showSystemJobs, jobs: data })
+    console.error('hay')
 
     return (
-        <React.Fragment>
+        <>
             <header className={styles.header}>
                 <h1 className={styles.headerTitle}>
                     {i18n.t('Scheduled jobs')}
@@ -48,7 +49,7 @@ const JobList = () => {
                 >
                     <span className={styles.headerLinkIcon}>
                         <IconInfo16 />
-                    </span>
+                    </span>oh hai
                     {i18n.t('About job configuration')}
                 </a>
             </header>
@@ -81,7 +82,7 @@ const JobList = () => {
                 </div>
                 <JobTable jobs={jobs} refetch={refetch} />
             </Card>
-        </React.Fragment>
+        </>
     )
 }
 
